@@ -1,6 +1,6 @@
 {
   "name": "caring-route",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "pub": "sh release.sh",
     "serve": "npm run dev:h5",
