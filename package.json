@@ -1,7 +1,8 @@
 {
-  "name": "uni-vite",
+  "name": "caring-route",
   "version": "0.0.1",
   "scripts": {
+    "pub": "sh release.sh",
     "serve": "npm run dev:h5",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
