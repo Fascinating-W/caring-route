@@ -1,12 +1,21 @@
 {
   "name": "caring-route",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
+   "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
+  "type": "module",
   "keywords": [],
   "author": "风度万人迷",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.1",
+    "rollup": "^3.21.5"
+  }
 }

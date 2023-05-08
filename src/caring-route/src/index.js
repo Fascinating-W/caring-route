@@ -45,6 +45,7 @@ class Route {
 		}
 		return Object.assign(params, obj)
 	}
+	// 解码onload中的query参数
 	query(query) {
 		const obj = {}
 		for (const key in query) {
@@ -70,7 +71,7 @@ class Route {
 		}
 		if (isPlainObject(url)) {
 			config = url
-			// config中参数中包含type和url参数，表示这是一个请求
+			// config中参数中同时包含type且type是内置跳转类型和url参数，表示这是一个请求
 			if (ROUTE_SET.includes(config.type) && typeof config.url === 'string') {
 				// 请求
 				config.routeUrl = url.url
