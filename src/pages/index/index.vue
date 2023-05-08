@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-04-27 17:39:09
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-08 19:42:46
+ * @LastEditTime: 2023-05-08 19:51:59
  * @Description: 
 -->
 <template>
@@ -35,7 +35,7 @@
   </view>
 </template>
 <script>
-import route from '@/caring-route/dist/index.js'
+import route from 'caring-route/index.js'
 export default {
   methods: {
     // route(url)

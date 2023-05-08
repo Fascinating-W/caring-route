@@ -47,6 +47,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3031320220314002",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3031320220314002",
     "caring-css": "^0.1.31",
+    "caring-route": "^0.0.4",
     "vue": "^3.2.31",
     "vue-i18n": "^9.1.9",
     "vuex": "^4.0.2"
