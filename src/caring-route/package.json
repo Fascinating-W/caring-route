@@ -1,18 +1,21 @@
 {
   "name": "caring-route",
   "version": "0.0.5",
-  "description": "",
+  "description": "适用于uni-app的路由跳转库",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
   },
   "type": "module",
   "keywords": [],
   "author": "风度万人迷",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fascinating-W/caring-route"
+  },
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.1",
