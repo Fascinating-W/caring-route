@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-04-27 17:39:09
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-08 19:43:27
+ * @LastEditTime: 2023-05-23 16:26:34
  * @Description: 
 -->
 <template>
@@ -17,11 +17,11 @@
         route.back(),返回上一级
       </button>
     </view>
-    
   </view>
 </template>
 <script>
-import route from '@/caring-route/src/index.js'
+// import route from '@/caring-route/src/index.js'
+import route from 'caring-route'
 
 export default {
   onLoad(options) {

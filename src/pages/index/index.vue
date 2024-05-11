@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-04-27 17:39:09
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-08 19:59:12
+ * @LastEditTime: 2024-05-11 16:18:43
  * @Description: 
 -->
 <template>
@@ -35,13 +35,18 @@
   </view>
 </template>
 <script>
-import route from 'caring-route'
+// import route from 'caring-route'
+import route from '../../caring-route/src/index'
+
 export default {
   methods: {
     toRoute(url) {
-      route(url).then((_) => {
-        console.log('跳转成功')
+      route({
+        url
       })
+      // route(url).then((_) => {
+      //   console.log('跳转成功')
+      // })
     },
     toRoute1(url) {
       route.to(url, {

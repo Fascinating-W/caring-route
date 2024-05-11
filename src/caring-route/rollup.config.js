@@ -2,10 +2,11 @@
  * @Author: Wanko
  * @Date: 2023-05-08 19:32:34
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-08 19:41:27
- * @Description: 
+ * @LastEditTime: 2024-05-11 17:05:34
+ * @Description:
  */
 import terser from '@rollup/plugin-terser'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 export default {
   input: 'src/index.js',
@@ -14,5 +15,5 @@ export default {
       file: 'dist/index.js'
     }
   ],
-  plugins: [terser()]
+  plugins: [nodeResolve(), terser()]
 }

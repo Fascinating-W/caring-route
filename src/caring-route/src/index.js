@@ -1,16 +1,11 @@
-/**
- * 对象转url参数
- * @param {*} data,对象
- * @param {*} isPrefix,是否自动加上"?"
- */
-import {
-	queryParams,
-	isPlainObject
-} from './helpers/util.js'
+
+import { queryParams} from 'caring-utils'
 
 const PARAMS_ROUTE = ['navigateTo', 'redirectTo', 'reLaunch']
-const ROUTE_SET = ['navigateTo', 'redirectTo', 'reLaunch', 'navigateBack', 'switchTab']
 
+function isObject(value) {
+  return Object.prototype.toString.call(value) === '[object Object]'
+}
 // 放在Route类里也可以
 function dispatchNavigate(config) {
 	const {
@@ -63,27 +58,22 @@ class Route {
 	}
 	navigate(url, config) {
 		if (!url) return false
+
 		if (typeof url === 'string') {
 			// 如果url为字符串，则config为params, 即route(url, params)的形式
 			if (!config) config = {}
 			config.routeUrl = this.mixinParam(url, config)
 			return dispatchNavigate(config)
 		}
-		if (isPlainObject(url)) {
+		if (isObject(url)) {
+			// 如果url为对象，则config为type, 即route(url, type)的形式
 			config = url
-			// config中参数中同时包含type且type是内置跳转类型和url参数，表示这是一个请求
-			if (ROUTE_SET.includes(config.type) && typeof config.url === 'string') {
-				// 请求
-				config.routeUrl = url.url
-				config.routeType = url.type
-				Reflect.deleteProperty(config, 'url')
-				Reflect.deleteProperty(config, 'type')
-				config.routeUrl = this.mixinParam(config.routeUrl, config.params)
-				return dispatchNavigate(config)
-			} else {
-				// 解码路由参数
-				return this.query(config)
-			}
+			config.routeUrl = url.url
+      config.routeType = url.type || 'navigateTo'
+      Reflect.deleteProperty(config, 'url')
+      Reflect.deleteProperty(config, 'type')
+      config.routeUrl = this.mixinParam(config.routeUrl, config.params)
+      return dispatchNavigate(config)
 		}
 	}
 	// 整合路由参数
