@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-04-27 17:39:09
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-23 16:26:34
+ * @LastEditTime: 2024-05-29 15:51:29
  * @Description: 
 -->
 <template>
@@ -20,8 +20,8 @@
   </view>
 </template>
 <script>
-// import route from '@/caring-route/src/index.js'
-import route from 'caring-route'
+import route from '@/caring-route/src/index.js'
+// import route from 'caring-route'
 
 export default {
   onLoad(options) {

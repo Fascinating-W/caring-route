@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-04-27 17:39:09
  * @LastEditors: Wanko
- * @LastEditTime: 2024-05-11 16:18:43
+ * @LastEditTime: 2024-05-29 16:18:51
  * @Description: 
 -->
 <template>
@@ -31,6 +31,9 @@
       <button class="bg-purple-light" @click="toRoute4('/pages/index/four')">
         route('/pages/index/four', {event}) 监听事件
       </button>
+      <button class="bg-purple-light" @click="toMini">
+        打开微信小程序
+      </button>
     </view>
   </view>
 </template>
@@ -40,6 +43,9 @@ import route from '../../caring-route/src/index'
 
 export default {
   methods: {
+    toMini(){
+      route.mini('wx87b638cc2075e9c1', 'pages/tabbar/components')
+    },
     toRoute(url) {
       route({
         url
@@ -56,7 +62,11 @@ export default {
           guitar: {
             level: 1
           }
-        }
+        },
+        arr: [1,2,3,4,5],
+        arrObj: [{
+          name:'wanko'
+        }, 23, 'age']
       })
     },
     toRoute2(url) {

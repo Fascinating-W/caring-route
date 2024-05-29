@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-04-27 17:39:09
  * @LastEditors: Wanko
- * @LastEditTime: 2023-04-27 17:46:04
+ * @LastEditTime: 2024-05-29 16:15:44
  * @Description: 
 -->
 <script>
@@ -20,6 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "caring-css/index.scss";
+// @import "caring-css";
 
 </style>
